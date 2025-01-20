@@ -74,7 +74,7 @@ public class ControlGastosIngresos {
                 }
             } else {
                 System.out.println("Por favor ingresa un número válido.");
-                sc.next(); // Consumir entrada inválida
+                sc.next();
             }
         } while (!opcionValida);
 
@@ -182,7 +182,7 @@ public class ControlGastosIngresos {
         }
 
         if (opcion != 4) {
-            inicioPrograma(usuario); // Repetir menú principal si no se elige salir
+            inicioPrograma(usuario);
         }
     }
 }

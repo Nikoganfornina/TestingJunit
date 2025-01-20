@@ -33,9 +33,6 @@ public class Usuario {
         this.dni = dni;
     }
 
-    public String toString() {
-        return "Usuario con DNI: " + dni + " - Saldo: " + saldo;
-    }
 
     private static boolean validarDni(String dni) {
         return dni.matches("\\d{8}");
@@ -127,7 +124,6 @@ public class Usuario {
         double nuevoSaldo = Usuario.getSaldo() + monto;
         Usuario.setSaldo(nuevoSaldo);
 
-        // Actualizar el saldo en la base de datos
         DataBase.actualizarSaldo(Usuario);
 
         System.out.println("El nuevo saldo es de: " + nuevoSaldo);
@@ -149,7 +145,6 @@ public class Usuario {
         double nuevoSaldo = Usuario.getSaldo() - monto;
         Usuario.setSaldo(nuevoSaldo);
 
-        // Actualizar el saldo en la base de datos
         DataBase.actualizarSaldo(Usuario);
 
         System.out.println("El nuevo saldo es de: " + nuevoSaldo);
